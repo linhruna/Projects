@@ -1,0 +1,699 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+    --first-color: #12192C;
+    --second-color: #F5A623;
+    --white-color: #ededed;
+
+    --body-font: 'Poppins', sans-serif;
+    --small-font-size: 0.875rem;
+
+    @media screen and (min-width: 768px) {
+        --small-font-size: 0.638rem;
+    }
+}
+
+:root {
+    --z-back: -10;
+    --z-normal: 1;
+    --z-tooltrip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    margin: 0.5rem;
+    padding: 1rem 0 0 16rem;
+    padding-left: 228px;
+    font-family: var(--body-font);
+    min-height: 100vh;
+    background: #060120;
+    transition: 0.5s
+}
+
+h1 {
+    margin: 0;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+a {
+    text-decoration: none;
+
+}
+
+.l-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 58px;
+    height: 100vh;
+    background: var(--first-color);
+    padding: 1.25rem 0.5rem 2rem;
+    transition: 0.5s;
+    z-index: var(--z-fixed);
+}
+
+.nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav_logo {
+    position: relative;
+    top: 20px;
+    right: -10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 0 0.5rem;
+}
+
+.nav_logo-icon {
+    margin-right: 0.75rem;
+    width: 30px;
+    height: 30px;
+    color: #b2cb40;
+}
+
+.nav_logo-text {
+    font-size: 1.4rem;
+    color: #b2cb40;
+    font-weight: 700;
+}
+
+.nav_toggle {
+    position: absolute;
+    top: 2rem;
+    right: -0.5rem;
+    width: 18px;
+    height: 18px;
+    background: var(--second-color);
+    border-radius: 50%;
+    font-size: 200%;
+    color: var(--first-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.nav_link {
+    position: relative;
+    top: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 1.2rem;
+    border-radius: 0.5rem;
+    color: var(--white-color);
+    transition: 0.5s;
+}
+
+.nav_link:hover {
+    background: var(--second-color);
+    color: var(--first-color);
+}
+
+.nav_icon {
+    font-size: 1.5rem;
+    margin-right: 0.75rem;
+}
+
+.nav_text {
+    font-weight: 550;
+}
+
+#logout {
+    position: relative;
+    top: -5px;
+}
+
+.show {
+    width: 228px;
+}
+
+.l-navbar:not(.show) .nav_text {
+    display: none;
+}
+
+.l-navbar:not(.show) .nav_logo-text {
+    display: none;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    transition: 0.2s;
+}
+
+.expander {
+    padding: 1rem 0 0 5rem;
+    padding-left: 58x;
+
+}
+
+.active {
+    background: var(--second-color);
+    color: var(--first-color);
+    transition: 0.3s;
+}
+
+.user-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.noti-icon {
+    font-size: 150%;
+    cursor: pointer;
+    color: var(--white-color);
+}
+
+.menu-profile {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    z-index: 2;
+}
+
+.menu-profile-icon {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 2;
+}
+
+
+.user-pic-in {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.drop-menu-profile {
+    position: fixed;
+    top: 30px;
+    right: 45px;
+    background-color: var(--first-color);
+    border: 1px solid #444;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    overflow: hidden;
+    flex-direction: column;
+    z-index: var(--z-modal);
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+
+}
+
+.drop-menu-profile.active {
+    transform: scale(1);
+}
+
+.drop-menu-profile a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.drop-menu-profile a:hover {
+    background-color: var(--second-color);
+    color: var(--first-color);
+}
+
+.drop-menu-profile a ion-icon {
+    margin-right: 8px;
+}
+
+.drop-menu-profile a .user-pic-in {
+    margin-right: 8px;
+}
+
+/* form phieu nhap kho */
+.form-phieu-nhap {
+    position: relative;
+    width: 90%;
+    max-width: 550px;
+    max-height: 9999px;
+    min-height: 650px;
+    margin: 5% auto;
+    background-color: #d8e990;
+    margin-left: 666px;
+    z-index: 1;
+}
+
+.form-phieu-nhap h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.product h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.product-details,
+.supplier-details {
+    width: 48%;
+}
+
+.product-details p,
+.supplier-details p {
+    margin: 5px 0;
+}
+
+.product .input-quantity {
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    width: 50%;
+    max-width: 300px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+#id-phieu-nhap,
+#total-price,
+#total-product {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#total-product {
+    display: block;
+}
+
+
+#date-in {
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: 70%;
+}
+
+.form-phieu-nhap #save-form {
+    height: 30px;
+    width: 100px;
+    font-size: 18px;
+    margin-left: 225px;
+    margin-top: 20px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--first-color);
+    color: var(--white-color);
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+.form-phieu-nhap #save-form:hover {
+    background-color: var(--second-color);
+    color: var(--first-color);
+}
+
+.check-save {
+    position: absolute;
+    height: 30px;
+    width: 200px;
+    margin-left: -150px;
+    margin-top: -20px;
+    background-color: #333;
+    color: var(--white-color);
+    box-sizing: 4px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: var(--z-tooltrip);
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+
+}
+
+.check-save::after {
+    position: absolute;
+    content: "";
+    height: 0;
+    width: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #333;
+    left: 50%;
+    top: 100%;
+    z-index: 1;
+}
+
+.check-save.active {
+    transform: scale(1);
+}
+
+.check-save.active:hover {
+    background-color: greenyellow;
+    color: #333;
+}
+
+#input-add {
+    position: relative;
+    display: flex;
+    gap: 25px;
+    top: 100px;
+    padding-left: 20px;
+
+}
+
+#input-add input {
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+#chevron-product-btn,
+#chevron-supplier-btn {
+    position: relative;
+    width: 22px;
+    height: 22px;
+    right: 26px;
+    top: 2.6px;
+    padding-left: 1.5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#chevron-icon {
+    font-size: 120%;
+}
+
+.plus-btn {
+    position: relative;
+    width: 22px;
+    height: 22px;
+    right: 26px;
+    top: 2.6px;
+    padding-left: 1.5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#plus-icon {
+    font-size: 120%;
+}
+
+#list-name-supplier {
+    position: absolute;
+    width: 200px;
+    min-height: 20px;
+    max-height: 400px;
+    top: 140px;
+    margin-left: 20px;
+    border-radius: 3px;
+    overflow-y: scroll;
+    transform: scale(0);
+    transition: height .2s ease;
+}
+
+#list-name-supplier p,
+#list-name-product p {
+    position: relative;
+    margin: 5px 0;
+    text-align: left;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+#list-name-supplier p:hover,
+#list-name-product p:hover {
+    background-color: #444;
+
+}
+
+.name-supplier.selected,
+.name-product.selected {
+    background-color: #444;
+}
+
+/*  */
+#list-name-product {
+    position: absolute;
+    width: 200px;
+    min-height: 20px;
+    max-height: 400px;
+    top: 140px;
+    margin-left: 300px;
+    border-radius: 3px;
+    overflow-y: scroll;
+    transform: scale(0);
+    transition: height .5s ease;
+
+}
+
+#list-name-product.active,
+#list-name-supplier.active {
+    transform: scale(1);
+    background-color: var(--white-color);
+
+}
+#view-all-list{
+    color: blue;
+    cursor: pointer;
+}
+#view-all-list:hover{
+    text-decoration-line: underline;
+}
+#product-form input,
+#supplier-form input {
+    padding: 10px;
+    margin: 5px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #444;
+    border-radius: 4px;
+}
+
+#save-product,
+#save-supplier {
+    padding: 10px;
+    margin: 5px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--first-color);
+    color: var(--white-color);
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+#save-product:hover,
+#save-supplier:hover {
+    background-color: var(--second-color);
+    color: var(--first-color);
+}
+
+.product-form,
+.supplier-form {
+    position: fixed;
+    top: 20%;
+    left: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #444;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: var(--white-color);
+    transform: scale(0);
+    transition: 0.5s;
+    z-index: 1000;
+}
+
+.product-form.active,
+.supplier-form.active {
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+#product-form .icon-close-product,
+.icon-close-supplier {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: #082033;
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#product-form .icon-close-product:hover,
+.icon-close-supplier:hover {
+    background-color: var(--second-color);
+    color: var(--first-color);
+}
+
+.accept-product-btn {
+    position: absolute;
+    height: 28px;
+    width: 200px;
+    font-size: 16px;
+    background-color: #082033;
+    color: var(--white-color);
+    border-radius: 4px;
+    box-shadow: 0 1px 2px #333;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.accept-product-btn:hover {
+    background-color: var(--second-color);
+    color: var(--first-color);
+}
+
+#reset-phieunk-btn {
+    position: absolute;
+    height: 26px;
+    font-size: 16px;
+    background-color: #082033;
+    color: var(--white-color);
+    font-weight: bold;
+    box-shadow: 0 1px 2px #333;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#reset-phieunk-btn:hover {
+    background-color: var(--second-color);
+    color: var(--first-color);
+}
+
+.delete-product {
+    position: relative;
+    top: -10px;
+    left: 97%;
+    width: 24px;
+    height: 24px;
+    background: #082033;
+    font-size: 1.2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 12px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.delete-product:hover {
+    background-color: var(--second-color);
+    color: var(--first-color);
+}
+#add-btn{
+    position: relative;
+    width: 50px;
+    height: 24px ;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #082033;
+    color: var(--white-color);
+    border-radius: 4px;
+    box-shadow: 0 1px 2px #444;
+    left: -15px;
+    cursor: pointer;
+}
+#add-btn:hover{
+    background-color: var(--second-color);
+    color: var(--first-color);
+}
+
+@media (max-width: 900px) {
+
+    .form-phieu-nhap {
+        position: absolute;
+        top: 40px;
+        margin-left: 350px;
+    }
+    #add-btn{
+        left: 240px;
+        bottom: 275px;
+    }
+    #input-add {
+        position: absolute;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        top: 70px;
+        gap: 250px;
+    }
+
+    #list-name-supplier {
+        max-height: 200px;
+        min-height: 20px;
+        top: 95px;
+    }
+
+    #list-name-product {
+        position: relative;
+        max-height: 200px;
+        min-height: 20px;
+        top: 354px;
+        right: 280px;
+
+    }
+
+    #plus-button {
+        margin-left: 0;
+    }
+}

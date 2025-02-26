@@ -1,0 +1,44 @@
+server:
+    port: 443
+    ssl:
+        key-alias: tomcat
+        key-store: classpath:keystore.p12
+        key-store-password: hta33550336
+        key-store-type: PKCS12
+        trust-store: classpath:truststore.p12
+        trust-store-password: hta33550336
+        trust-store-type: PKCS12
+    address: www.smithsfallsnailsspa.com
+
+spring:
+    application:
+        name: Inventory Management System
+    datasource:
+        url: jdbc:postgresql://dpg-ctrbr7i3esus73bbe6h0-a.singapore-postgres.render.com/ims_dvt0
+        username: ims_user
+        password: DHfZtLR3R1oWjAKob3D7UgALXHaAs26L
+        driver-class-name: org.postgresql.Driver
+    jpa:
+        database: postgresql
+        show-sql: true
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                format_sql: true
+                use_sql_comments: true
+    devtools:
+        restart:
+            exclude: src/main/resources/logs/**
+
+#logging:
+#    file:
+#        name: src/main/resources/logs/application.log
+#    level:
+#        jpa: DEBUG
+#        org:
+#            springframework:
+#                security: DEBUG
+#            hibernate:
+#                type: trace
+#                orm.jdbc.bind: trace

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IM Systems</title>
+    <link rel="stylesheet" href="/css/phieuNK.css">
+</head>
+
+<body id="body">
+    <!-- Navbar -->
+    <div class="l-navbar show" id="navbar">
+        <div class="nav">
+            <div>
+                <a href="#" class="nav_logo">
+                    <ion-icon name="logo-octocat" class="nav_logo-icon"></ion-icon>
+                    <span class="nav_logo-text">IM Systems</span>
+                </a>
+                <div class="nav_toggle" id="nav_toggle">
+                    <ion-icon name="chevron-back-outline"></ion-icon>
+                </div>
+                <ul class="nav_list">
+                    <a href="#" class="nav_link">
+                        <ion-icon name="grid" class="nav_icon"></ion-icon>
+                        <span class="nav_text">Dashboard</span>
+                    </a>
+                    <a href="./introIMS.html" class="nav_link">
+                        <ion-icon name="file-tray-stacked" class="nav_icon"></ion-icon>
+                        <span class="nav_text">Product Management</span>
+                    </a>
+                    <a href="./supplierManagement.html" class="nav_link">
+                        <ion-icon name="people" class="nav_icon"></ion-icon>
+                        <span class="nav_text">Partner Management</span>
+                    </a>
+                    <a href="./phieuXK.html" class="nav_link">
+                        <ion-icon name="cloud-download" class="nav_icon"></ion-icon>
+                        <span class="nav_text">Inventory Out</span>
+                    </a>
+                    <a href="#" class="nav_link active">
+                        <ion-icon name="cloud-upload" class="nav_icon"></ion-icon>
+                        <span class="nav_text">Inventory In</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <ion-icon name="cart" class="nav_icon"></ion-icon>
+                        <span class="nav_text">Order Management</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <ion-icon name="create" class="nav_icon"></ion-icon>
+                        <span class="nav_text">Report & Analytics</span>
+                    </a>
+                </ul>
+            </div>
+            <div>
+                <a href="./loginRegister.html" class="nav_link" id="logout">
+                    <ion-icon name="log-out" class="nav_icon"></ion-icon>
+                    <span class="nav_text">Logout</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Dropdown menu profile -->
+    <div class="menu-profile">
+        <div class="menu-profile-icon">
+            <ion-icon name="notifications" class="noti-icon"></ion-icon>
+            <img src=".\Assets\user0.png" class="user-pic" id="userpic">
+        </div>
+        <div class="drop-menu-profile" id="drop-menu-profile">
+            <a href="#" id="username"> <img src=".\Assets\user0.png" class="user-pic-in">Username0 </a>
+            <a href="#">
+                <ion-icon name="person"></ion-icon> Profile
+            </a>
+            <a href="#">
+                <ion-icon name="settings"></ion-icon> Settings
+            </a>
+            <a href="#">
+                <ion-icon name="help-circle"></ion-icon> Help & Support
+            </a>
+            <a href="#">
+                <ion-icon name="swap-horizontal"></ion-icon> Convert Account
+            </a>
+        </div>
+    </div>
+    <!-- add info of supplier and product to phieunk-->
+    <div id="input-add">
+        <div>
+            <input id="supplier-name-input" type="text" placeholder="---Supplier Name---">
+            <button id="chevron-supplier-btn"><ion-icon id="chevron-icon"
+                    name="chevron-down-outline"></ion-icon></button>
+            <button class="plus-btn" id="add-supplier-btn"><ion-icon id="plus-icon" name="add"></ion-icon></button>
+        </div>
+        <div>
+            <input id="product-name-input" type="text" placeholder="---Product Name---">
+            <button id="chevron-product-btn"><ion-icon id="chevron-icon"
+                    name="chevron-down-outline"></ion-icon></button>
+            <button class="plus-btn" id="add-product-btn"><ion-icon id="plus-icon" name="add"></ion-icon></button>
+        </div>
+        <button id="add-btn">Add</button>
+    </div>
+    <button class="list-infor" id="list-name-supplier"></button>
+    <button class="list-infor" id="list-name-product">
+    </button>
+    
+    <!-- form-phieunk -->
+    <form class="form-phieu-nhap" onsubmit="return fale;">
+        <header>
+            <button type="button" id="reset-phieunk-btn">Reset</button>
+        </header>
+        <h2>Inventory Receipt Note</h2>
+        <span id="id-phieu-nhap">Receipt ID: </span>
+        <div id="inforSupplierProduct">
+
+        </div>
+        
+        <span id="total-price"></span>
+        <span id="total-product"></span>
+        <footer id="date-in"></footer>
+        <button id="save-form">Save</button>
+        <button id="check-save" class="check-save" type="button">Are you sure?</button>
+    </form>
+    <!-- form-add-new-product -->
+    <form class="product-form" id="product-form">
+        <h2>New Product</h2>
+        <span class="icon-close-product">
+            <ion-icon name="close"></ion-icon>
+        </span>
+        <input type="text" id="product-name" placeholder="Product Name" required>
+        <input type="text" id="product-unitCal" placeholder="Unit">
+        <input type="text" id="product-price" placeholder="Price" required>
+        <input type="text" id="product-category" placeholder="Category" required>
+        <button id="save-product" class="save-product">Save Product</button>
+    </form>
+    <form class="supplier-form" id="supplier-form">
+        <h2>New Supplier</h2>
+        <span class="icon-close-supplier">
+            <ion-icon name="close"></ion-icon>
+        </span>
+        <input type="text" id="supplier-name" placeholder="Supplier Name" required>
+        <input type="text" id="number-contact" placeholder="Number Contact">
+        <input type="text" id="address" placeholder="Address" required>
+        <button id="save-supplier" class="save-supplier"  type="button">Save Supplier</button>
+    </form>
+
+
+
+
+
+    <script src="/js/phieuNK.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Inventory Receipt Note</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="phieunk.css" rel="stylesheet">
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: #333;
+        }
+
+        ion-icon {
+            font-size: 200%;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        #print-form,
+        #download-form {
+            position: relative;
+            top: 0;
+            left: 85%;
+            margin: 5px;
+        }
+
+        #print-form:hover #print-btn,
+        #download-form:hover #download-btn {
+            opacity: 1;
+        }
+
+        button {
+            position: absolute;
+            margin: 5px;
+            border-radius: 5px;
+            border: none;
+            font-size: 14px;
+            background-color: antiquewhite;
+            top: 10px;
+            transition: opacity 0.3s ease;
+            opacity: 0;
+            z-index: 1000;
+        }
+
+        #download-btn {
+            right: 5%;
+        }
+
+        #print-btn {
+            right: 10%;
+        }
+
+        .form-phieu-nhap {
+            position: relative;
+            right: 400px;
+            background-color: #fff;
+
+        }
+
+        @media (max-width: 900px) {
+            .form-phieu-nhap {
+                width: 550px;
+                top: 40px;
+                right: 480px;
+            }
+        }
+
+        @media print {
+
+            #print-form,
+            #download-form {
+                display: none;
+            }
+
+            #form-phieu-nhap {
+                padding-right: 10px;
+                position: absolute;
+                right: 65px;
+                height: auto;
+            }
+
+
+
+            @page {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+
+        }
+    </style>
+    <span id="print-form">
+        <ion-icon id="print-icon" name="print" onclick="window.print()"></ion-icon>
+        <button id="print-btn">Print</button>
+
+    </span>
+    <span id="download-form">
+        <ion-icon id="download-icon" name="download"></ion-icon>
+        <button id="download-btn">Download</button>
+    </span>
+
+    <form class="form-phieu-nhap" id="form-phieu-nhap">
+        <h2>Inventory Receipt Note</h2>
+        <div id="id-phieu-nhap">Receipt ID: </div>
+        <div id="inforSupplierProduct">
+
+        </div>
+        <div>
+            <span id="total-price"></span>
+            <span id="total-product"></span>
+            <footer id="date-in" style="font-size: 18px; padding-right: 5px;"></footer>
+        </div>
+
+    </form>
+
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const phieuNKData = JSON.parse(sessionStorage.getItem("phieuNKData"));
+        if (phieuNKData) {
+            const phieuContent = document.getElementById("inforSupplierProduct");
+
+            phieuNKData.infoPhieuNK.forEach((product) => {
+                const productDiv = document.createElement("div");
+                productDiv.classList.add("product");
+                productDiv.innerHTML = `
+                <div class="product-info">
+                    <div class="product-details">
+                        <h3>Product ID: ${product.productID}</h3>
+                        <p>Product Name: ${product.productName}</p>
+                        <p>UnitCal: ${product.unitCal}</p>
+                        <p>Price: ${product.price}</p>
+                        <p>Quantity: ${product.quantity}</p>
+                    </div>
+                    <div class="supplier-details">
+                        <h3>Supplier ID: ${product.supplierID}</h3>
+                        <p>Supplier Name: ${product.supplierName}</p>
+                        <p>Supplier Contact: ${product.supplierContact}</p>
+                        <p>Address: ${product.supplierAddress}</p>
+                    </div>
+                </div>
+            `;
+                phieuContent.appendChild(productDiv);
+            });
+            document.getElementById("id-phieu-nhap").textContent = `Receipt ID: ${phieuNKData.importID}`;
+            document.getElementById("total-product").textContent = phieuNKData.totalProductElement;
+            document.getElementById("total-price").textContent = phieuNKData.totalPriceElement;
+            document.getElementById("date-in").textContent = phieuNKData.dateIn;
+        }
+    });
+
+</script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</html>
