@@ -1,0 +1,71 @@
+.table {
+    border-bottom: 2px solid #B0BEC5; /* Đường viền màu xám nhạt */
+    font-size: 18px;
+    border-radius: 8px; /* Bo góc mềm mại cho toàn bảng */
+    overflow: hidden; /* Đảm bảo các góc không bị ảnh hưởng */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng nhẹ */
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%; /* Đảm bảo bảng chiếm toàn bộ chiều rộng */
+}
+
+thead {
+    height: 1.5em;
+    text-align: left;
+    background-color: #546E7A; /* Màu xám đậm cho phần đầu bảng */
+    color: white; /* Chữ màu trắng */
+}
+
+th {
+    padding: 0.8em; /* Tăng khoảng cách bên trong ô */
+    font-weight: bold;
+}
+
+th, td {
+    width: 15%;
+    padding: 0.6em 0.8em; /* Cách đều khoảng cách nội dung trong ô */
+}
+
+#table-top-left {
+    border-top-left-radius: 8px; /* Bo góc trên bên trái */
+}
+
+#table-top-right {
+    border-top-right-radius: 8px; /* Bo góc trên bên phải */
+}
+
+tr {
+    height: 47px;
+    background-color: #ECEFF1; /* Màu nền xám nhạt */
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu nền */
+}
+
+tr:nth-child(even) {
+    background-color: #CFD8DC; /* Màu nền xám trung bình cho các hàng chẵn */
+}
+
+tr:hover {
+    background-color: #B0BEC5; /* Hiệu ứng hover với màu xám đậm hơn */
+}
+
+.td {
+    padding: 0;
+}
+
+.table-align-center, .table-align-center thead {
+    text-align: center; /* Căn giữa nội dung nếu cần */
+}
+
+.long-cell {
+    width: 20%;
+}
+
+.longer-cell {
+    width: 30%;
+}
+
+.short-cell {
+    width: 10%;
+}

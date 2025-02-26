@@ -1,0 +1,87 @@
+h3 {
+    text-align: center;
+    font-size: 24px;
+    color: #333; /* Màu chữ tiêu đề tối */
+    margin-bottom: 20px;
+}
+
+.content {
+    padding: 0;
+}
+
+.card-container {
+    width: 75%;
+    max-width: 750px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    display: inline-block;
+    line-height: 90px;
+    width: 30%;
+    max-width: 250px;
+    min-width: 160px;
+    text-align: center;
+    background: #5b8ac3; /* Màu xanh nhẹ */
+    border-radius: 8px; /* Bo góc mềm mại */
+    margin: 1.4%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Thêm bóng mờ cho card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng khi hover */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Đẩy card lên khi hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Bóng mờ đậm hơn khi hover */
+}
+
+.card i {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-bottom: 10px;
+    color: #5b8ac3; /* Màu icon phù hợp với background của card */
+    font-size: 22px;
+}
+
+.card span {
+    font-size: 18px;
+    color: #fff; /* Màu chữ trắng */
+    font-weight: 600;
+}
+
+#students {
+    background-color: #f7a800; /* Màu cam hiện đại cho card students */
+}
+
+#teachers {
+    background-color: #f44336; /* Màu đỏ hiện đại cho card teachers */
+}
+
+.fa-user {
+    font-size: 22px !important;
+}
+
+.fa-user-secret {
+    font-size: 22px !important;
+}
+
+.fa-pencil {
+    font-size: 22px !important;
+}
+
+@media screen and (max-width: 557px) {
+    .card-container {
+        width: 100%; /* Mở rộng chiều rộng container khi màn hình nhỏ */
+        justify-content: center; /* Căn giữa các card */
+    }
+  
+    .card {
+        margin-bottom: 15px; /* Thêm khoảng cách giữa các card */
+        width: 80%; /* Điều chỉnh chiều rộng của mỗi card khi màn hình nhỏ */
+    }
+}

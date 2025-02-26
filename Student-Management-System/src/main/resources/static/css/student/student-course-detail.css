@@ -1,0 +1,145 @@
+h3 {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    color: #333; /* Màu chữ trung tính */
+    margin-bottom: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%; /* Thu nhỏ chiều ngang của bảng */
+    margin: 0 auto; /* Căn giữa bảng */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng nhẹ */
+    border-radius: 10px; /* Bo góc toàn bảng */
+    overflow: hidden;
+    background-color: #f7f7f7; /* Màu nền xám nhạt hiện đại */
+}
+
+thead {
+    height: 1.5em;
+    text-align: center;
+    background-color: #666; /* Màu xám đậm cho tiêu đề */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase; /* Chữ in hoa */
+}
+
+th, td {
+    padding: 0.8em;
+    font-size: 14px;
+    color: #333; /* Màu chữ xám đậm */
+}
+
+th {
+    background-color: #666; /* Màu nền xám đậm */
+    color: white; /* Chữ màu trắng */
+}
+
+tr {
+    height: 40px;
+    background-color: #f9f9f9; /* Màu nền xám nhạt cho các hàng */
+    transition: background-color 0.3s ease; /* Hiệu ứng hover chuyển màu */
+}
+
+tr:nth-child(even) {
+    background-color: #e5e5e5; /* Màu xám sáng hơn cho hàng chẵn */
+}
+
+tr:hover {
+    background-color: #d6d6d6; /* Màu xám nhạt hơn khi hover */
+}
+
+#table-top-left {
+    border-top-left-radius: 10px;
+}
+
+#table-top-right {
+    border-top-right-radius: 10px;
+}
+
+.card {
+    display: inline-block;
+    width: 30%;
+    max-width: 250px;
+    min-width: 160px;
+    text-align: center;
+    margin: 2%;
+    position: relative;
+    background-color: #666; /* Màu xanh nhạt */
+    border-radius: 12px; /* Bo góc mềm mại */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng hover mượt mà */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Hiệu ứng nổi lên khi hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Tăng bóng khi hover */
+    background-color: #b2ebf2; /* Màu xanh sáng hơn khi hover */
+}
+
+.card a {
+    text-decoration: none;
+    display: block;
+    background-color: #666; /* Màu xanh nhạt hơn cho đầu thẻ */
+    border-radius: 12px ; /* Bo góc phía trên */
+    height: 90px;
+    transition: background-color 0.3s ease; /* Hiệu ứng mượt khi hover */
+}
+
+.card a:hover {
+    background-color: #777; /* Màu xanh nhạt đậm hơn khi hover */
+}
+
+.card i {
+    width: 40px;
+    line-height: 40px;
+    border-radius: 100px;
+    background-color: #ffffff; /* Nền trắng cho icon */
+    font-size: 22px;
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #00838f; /* Màu xanh đậm hơn cho icon */
+}
+
+.card span {
+    font-size: 16px;
+    color: #007c91; /* Màu xanh đậm */
+    font-weight: bold;
+}
+
+#card-name {
+    line-height: 20px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#card-day {
+    line-height: 20px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    color: white;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 557px) {
+    .card-container {
+        width: 100%;
+    }
+
+    .card {
+        margin-bottom: 10px;
+        width: 100%; /* Card chiếm toàn bộ chiều ngang */
+    }
+}

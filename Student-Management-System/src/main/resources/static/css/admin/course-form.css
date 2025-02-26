@@ -1,0 +1,95 @@
+h3 {
+    font-size: 26px;
+    text-align: center;
+    padding-top: 20px;
+    color: #333;
+    font-weight: 600;
+}
+
+.content {
+    padding-top: 40px;
+}
+
+.container {
+    width: 90%; /* Điều chỉnh chiều rộng container cho phù hợp với màn hình */
+    max-width: 500px;
+    min-height: 350px;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 18px;
+    padding: 20px;
+    box-sizing: border-box; /* Đảm bảo tính toán chiều rộng đúng */
+}
+
+.container form {
+    width: 100%;
+    margin: auto;
+}
+
+.form-input-item {
+    margin: 15px 0;
+    font-weight: 500;
+    color: #555;
+}
+
+.error {
+    color: #ff1616;
+    font-size: 14px;
+    margin: 6px 0 0;
+}
+
+.content input,
+select {
+    width: 100%; /* Đảm bảo input và select chiếm 100% chiều rộng của container */
+    height: 40px; 
+    padding: 0 10px;
+    margin-top: 8px;
+    border-radius: 8px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e6e9ef;
+    font-size: 16px;
+    box-sizing: border-box; /* Đảm bảo tính toán chiều rộng với padding và border */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content input:focus,
+select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    width: 100%; /* Đảm bảo button chiếm 100% chiều rộng của container */
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    height: 45px;
+    margin-top: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+@media screen and (max-width: 650px) {
+    .container {
+        width: 90%;
+    }
+    
+    .content input,
+    select,
+    button {
+        font-size: 14px; /* Điều chỉnh font cho các phần tử khi màn hình nhỏ */
+    }
+}

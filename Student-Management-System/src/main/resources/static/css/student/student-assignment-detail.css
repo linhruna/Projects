@@ -1,0 +1,122 @@
+h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333; /* Màu chữ trung tính */
+    margin-bottom: 20px;
+    text-align: center; /* Căn giữa tiêu đề */
+}
+
+.content {
+    font-size: 16px;
+    line-height: 1.6; /* Tăng khoảng cách giữa các dòng để dễ đọc */
+    color: #555; /* Màu chữ tối giản, dễ nhìn */
+    margin: 0 auto; /* Căn giữa phần nội dung */
+    max-width: 800px; /* Giới hạn chiều rộng để nội dung không quá rộng */
+}
+
+.content span {
+    font-weight: 600;
+    color: #333; /* Màu sắc chữ nổi bật */
+}
+
+.content div {
+    margin-bottom: 15px; /* Tăng khoảng cách giữa các phần tử */
+}
+
+#completed {
+    font-weight: normal;
+    color: #4CAF50; /* Màu xanh nhẹ cho "hoàn thành" */
+}
+
+#incomplete {
+    font-weight: normal;
+    color: #D32F2F; /* Màu đỏ nhẹ cho "chưa hoàn thành" */
+}
+
+.button {
+    display: inline-block;
+    background-color: #007BFF; /* Màu xanh nhẹ, tinh tế */
+    color: #fff; /* Chữ trắng trên nền xanh */
+    text-decoration: none;
+    padding: 12px 24px; /* Padding rộng và thoải mái */
+    font-size: 16px; /* Kích thước chữ vừa phải */
+    text-align: center;
+    border-radius: 8px; /* Bo góc mượt mà */
+    font-weight: 500; /* Độ đậm chữ vừa phải */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Hiệu ứng mượt mà khi hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng nhẹ */
+    margin-top: 20px; /* Khoảng cách phía trên */
+}
+
+.button:hover {
+    background-color: #0056b3; /* Đổi sang màu xanh tối hơn khi hover */
+    transform: translateY(-3px); /* Hiệu ứng nâng nhẹ khi hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Tăng bóng khi hover */
+}
+
+/* Các phần tử nội dung div */
+.content div {
+    display: flex;
+    justify-content: space-between; /* Căn đều các phần tử con */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin-bottom: 15px;
+}
+
+.content div span {
+    font-weight: 600;
+}
+
+.content div p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Bố cục cho các thông tin hoàn thành và chưa hoàn thành */
+#completed, #incomplete {
+    font-weight: normal;
+    font-size: 14px; /* Giảm font size để tạo sự hài hòa */
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+#completed {
+    background-color: #e8f5e9; /* Màu nền nhẹ nhàng cho "hoàn thành" */
+    color: #4CAF50; /* Màu xanh cho chữ */
+}
+
+#incomplete {
+    background-color: #ffebee; /* Màu nền nhẹ cho "chưa hoàn thành" */
+    color: #D32F2F; /* Màu đỏ cho chữ */
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .content {
+        padding: 0 15px; /* Thêm padding khi trên thiết bị di động */
+    }
+
+    .button {
+        width: 100%; /* Nút rộng đầy đủ trên thiết bị nhỏ */
+    }
+
+    .content div {
+        flex-direction: column; /* Sắp xếp các phần tử theo cột trên màn hình nhỏ */
+        align-items: flex-start; /* Căn trái cho các phần tử */
+    }
+}
+
+@media (max-width: 480px) {
+    h3 {
+        font-size: 20px; /* Giảm font size tiêu đề trên màn hình nhỏ */
+    }
+
+    .content {
+        font-size: 14px; /* Giảm kích thước font cho nội dung */
+    }
+
+    #completed, #incomplete {
+        font-size: 12px; /* Giảm kích thước chữ cho trạng thái */
+    }
+}

@@ -1,0 +1,50 @@
+h3 {
+    text-align: center;
+    font-size: 26px;
+    color: #333; /* Màu chữ đậm hơn để dễ đọc */
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+button {
+    background-color: #007bff; /* Màu xanh mới, hiện đại hơn */
+    text-decoration: none;
+    border-radius: 8px; /* Bo góc mềm mại hơn */
+    line-height: 24px;
+    border: none;
+    width: 120px; /* Đặt lại chiều rộng cho nút, tạo cảm giác cân đối */
+    height: 40px; /* Cải thiện chiều cao để nút trông rõ ràng hơn */
+    font-size: 16px; /* Cải thiện kích thước font chữ */
+    color: white; /* Màu chữ trắng */
+    cursor: pointer; /* Thêm hiệu ứng khi di chuột vào nút */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Thêm hiệu ứng khi hover */
+}
+
+button:hover {
+    background-color: #0056b3; /* Màu xanh đậm khi hover */
+    transform: translateY(-3px); /* Thêm hiệu ứng nâng lên khi hover */
+}
+
+button:active {
+    transform: translateY(1px); /* Hiệu ứng khi click vào nút */
+}
+
+select {
+    width: 220px;
+    height: 36px;
+    border-radius: 5px; /* Bo góc mềm mại */
+    border: 1px solid #ccc; /* Viền mảnh để trông hiện đại hơn */
+    padding: 0 10px; /* Thêm khoảng cách bên trong cho select */
+    font-size: 14px; /* Cải thiện kích thước font chữ */
+    background-color: #fff; /* Nền trắng cho select */
+    transition: border-color 0.3s ease, background-color 0.3s ease; /* Thêm hiệu ứng mượt mà */
+}
+
+select:hover {
+    border-color: #007bff; /* Thay đổi màu viền khi hover */
+}
+
+select:focus {
+    border-color: #0056b3; /* Thay đổi màu viền khi select được chọn */
+    background-color: #f1f9ff; /* Thêm màu nền nhẹ khi focus */
+}

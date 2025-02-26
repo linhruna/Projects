@@ -1,0 +1,39 @@
+.button {
+    width: 90px; /* Tăng chiều rộng cho nút cân đối hơn */
+    line-height: 35px; /* Chiều cao dòng để nút nhìn cân đối */
+    background-color: #0056b3; /* Màu xanh đậm hiện đại */
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    color: white; /* Chữ màu trắng cho nút nổi bật */
+    border-radius: 8px; /* Góc bo mềm mại hơn */
+    font-size: 14px; /* Font chữ nhỏ gọn */
+    font-weight: bold; /* Làm chữ nổi bật hơn */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng đổ nhẹ */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Thêm hiệu ứng mượt mà */
+}
+
+.button:hover {
+    background-color: #004494; /* Tông màu xanh tối hơn khi hover */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Tăng độ nổi bật bóng khi hover */
+}
+
+.delete-button {
+    background-color: #e63946 !important; /* Màu đỏ nhạt hiện đại */
+    color: white !important;
+}
+
+.delete-button:hover {
+    background-color: #d62828 !important; /* Màu đỏ đậm hơn khi hover */
+    box-shadow: 0px 6px 8px rgba(214, 40, 40, 0.3) !important;
+}
+
+.courses-button {
+    background-color: #2a9d8f; /* Màu xanh ngọc thanh lịch */
+    color: white; /* Chữ màu trắng */
+}
+
+.courses-button:hover {
+    background-color: #21867a; /* Màu xanh tối hơn khi hover */
+    box-shadow: 0px 6px 8px rgba(42, 157, 143, 0.3); /* Bóng đổ nhẹ khi hover */
+}

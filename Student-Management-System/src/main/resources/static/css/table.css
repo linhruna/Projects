@@ -1,0 +1,65 @@
+table {
+    margin: 30px auto 0px;
+    border-bottom: 2px solid #ccc; /* Đổi màu viền thành xám nhạt */
+    border-collapse: collapse;
+    font-size: 15px; /* Giảm cỡ chữ từ 18px xuống 16px */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Thêm hiệu ứng đổ bóng */
+    border-radius: 8px; /* Bo tròn nhẹ các góc bảng */
+    overflow: hidden; /* Áp dụng bo tròn đúng cách */
+    width: 90%; /* Canh chỉnh bảng gần với kích thước chuẩn */
+}
+
+thead {
+    height: 1.5em;
+    text-align: left;
+    background-color: #e0e0e0; /* Đổi màu nền thead thành xám nhạt */
+}
+
+th {
+    background-color: #666; /* Đổi màu nền th thành xám đậm */
+    color: white; /* Giữ màu chữ là trắng */
+    text-transform: uppercase; /* Chữ in hoa để hiện đại hơn */
+    letter-spacing: 1px; /* Thêm khoảng cách giữa chữ */
+    font-size: 14px; /* Giảm cỡ chữ của th */
+}
+
+th, td {
+    padding: 10px 15px; /* Căn padding hiện đại */
+    text-align: left; /* Canh trái các ô */
+}
+
+#table-top-left {
+    border-top-left-radius: 8px; /* Bo tròn góc trái trên */
+}
+
+#table-top-right {
+    border-top-right-radius: 8px; /* Bo tròn góc phải trên */
+}
+
+tr {
+    height: 50px;
+    background-color: #f9f9f9; /* Màu nền nhạt */
+    transition: background-color 0.3s ease; /* Thêm hiệu ứng chuyển màu mượt */
+}
+
+tr:nth-child(even) {
+    background-color: #ffffff; /* Xen kẽ màu trắng */
+}
+
+tr:hover {
+    background-color: #d6d6d6; /* Đổi màu hover thành xám nhạt */
+    cursor: pointer; /* Thêm hiệu ứng con trỏ */
+}
+
+.long-cell {
+    width: 20vw !important;
+}
+
+.longer-cell {
+    width: 25vw !important;
+    min-width: 200px !important;
+}
+
+.short-cell {
+    width: 10vw;
+}
