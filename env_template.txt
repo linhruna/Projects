@@ -1,0 +1,13 @@
+# API Keys for Image Services
+# Đăng ký tại https://unsplash.com/developers 
+UNSPLASH_API_KEY="n0JFm8vJUOcDSafRcKDm9U7YBNUTFUX_h0B15Q9KB7Q"
+
+# Đăng ký tại https://pixabay.com/api/docs/
+PIXABAY_API_KEY="50454022-300c2ac99336b993f18ac022d"
+
+# Đăng ký tại https://www.pexels.com/api/
+PEXELS_API_KEY="x5V1YMYwXEPJS8fT0qcvVzVM61uxxvdDD6Uw8sonKX4erePbAte9TfFF"
+
+# OpenAI/Groq API keys (nếu cần)
+# OPENAI_API_KEY="YOUR_OPENAI_API_KEY"rrgrrg
+# GROQ_API_KEY="YOUR_GROQ_API_KEY" 
