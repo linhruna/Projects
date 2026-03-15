@@ -1,5 +1,5 @@
 
-#AIMS Web – Internet Media Store
+# AIMS Web – Internet Media Store
 
 ## Introduction
 AIMS (Internet Media Store) is an e-commerce web application that allows customers to browse and purchase media products such as books, CDs, DVDs, and newspapers.  
