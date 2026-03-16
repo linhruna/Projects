@@ -43,5 +43,12 @@ The system also provides management features for administrators to manage produc
 ### Payment Integration
 - PayPal Sandbox API
 - VietQR API
+ ## Giao diện của trang web
 <img width="1123" height="591" alt="image" src="https://github.com/user-attachments/assets/4feb405b-f450-4444-9748-3c619e9b39ec" />
+## Giao diện đặt hàng 
+<img width="966" height="589" alt="image" src="https://github.com/user-attachments/assets/98826caa-6958-490b-be3d-80431408fb34" />
+ ##  Giao diện thanh toán 
+<img width="962" height="598" alt="image" src="https://github.com/user-attachments/assets/5176b9ab-3ce0-409a-8d37-f31baa1ace81" />
+
+
 
