@@ -44,9 +44,3 @@ The system also provides management features for administrators to manage produc
 - PayPal Sandbox API
 - VietQR API
 
-### Deployment
-- Render (Frontend & Backend)
-- MongoDB Atlas
-
-## System Architecture
-The system follows a **client-server architecture**:
