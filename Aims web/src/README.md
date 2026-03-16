@@ -43,4 +43,5 @@ The system also provides management features for administrators to manage produc
 ### Payment Integration
 - PayPal Sandbox API
 - VietQR API
+<img width="1123" height="591" alt="image" src="https://github.com/user-attachments/assets/4feb405b-f450-4444-9748-3c619e9b39ec" />
 
